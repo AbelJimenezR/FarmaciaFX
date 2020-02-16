@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.nouMedicamentController">
+   <children>
+      <Label layoutX="239.0" layoutY="52.0" text="NOU MEDICAMENT" />
+      <Label layoutX="136.0" layoutY="110.0" text="NOM:" />
+      <Label layoutX="136.0" layoutY="138.0" text="TIPUS" />
+      <Label layoutX="136.0" layoutY="169.0" text="EMPRESA:" />
+      <Label layoutX="136.0" layoutY="200.0" text="PREU:" />
+      <Label layoutX="136.0" layoutY="232.0" text="RECEPTA:" />
+      <TextField fx:id="nom" layoutX="284.0" layoutY="105.0" />
+      <TextField fx:id="empresa" layoutX="284.0" layoutY="164.0" />
+      <TextField fx:id="preu" layoutX="284.0" layoutY="195.0" />
+      <CheckBox fx:id="recepta" layoutX="360.0" layoutY="231.0" mnemonicParsing="false" />
+      <Button layoutX="208.0" layoutY="308.0" mnemonicParsing="false" onAction="#optBotons" text="Ok" />
+      <Button layoutX="316.0" layoutY="308.0" mnemonicParsing="false" onAction="#optBotons" text="Tornar" />
+      <ChoiceBox fx:id="tipus" layoutX="285.0" layoutY="133.0" prefHeight="26.0" prefWidth="170.0" />
+   </children>
+</Pane>

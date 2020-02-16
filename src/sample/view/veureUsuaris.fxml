@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.VeureUsuarisController">
+   <children>
+      <TableView fx:id="taulaUsuaris" layoutX="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="600.0">
+         <columns>
+            <TableColumn prefWidth="96.0" text="NOM">
+               <cellValueFactory>
+                  <PropertyValueFactory property="nom" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="204.0" text="COGNOM">
+            <cellValueFactory>
+               <PropertyValueFactory property="cognom" />
+            </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="155.0" text="PASSWORD">
+            <cellValueFactory>
+               <PropertyValueFactory property="pass" />
+            </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="144.0" text="TIPUS">
+            <cellValueFactory>
+               <PropertyValueFactory property="tipus" />
+            </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Button layoutX="269.0" layoutY="364.0" mnemonicParsing="false" onAction="#tornaPrincipal" text="Tornar" />
+   </children>
+</AnchorPane>

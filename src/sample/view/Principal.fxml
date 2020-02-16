@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Usuaris">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#menuUsuari" text="Nou Usuari" />
+            <MenuItem mnemonicParsing="false" onAction="#menuUsuari" text="Modifica Usuari" />
+            <MenuItem mnemonicParsing="false" onAction="#menuUsuari" text="Veure Usuaris" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Medicaments">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#menuUsuari" text="Nou Medicament" />
+            <MenuItem mnemonicParsing="false" onAction="#menuUsuari" text="Veure Medicaments" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" onAction="#menuUsuari" text="Venda">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Venda" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <AnchorPane prefHeight="394.0" prefWidth="640.0">
+         <children>
+            <Label fx:id="label" text="FARMACIA" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
