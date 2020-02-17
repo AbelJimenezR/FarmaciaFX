@@ -1,6 +1,6 @@
 package sample;
 
-public class MedicamentoCon extends Medicamento{
+public class MedicamentoCon extends Medicamento implements Cloneable{
 
 	public MedicamentoCon() {
 		// TODO Auto-generated constructor stub
@@ -35,7 +35,11 @@ public class MedicamentoCon extends Medicamento{
 		
 	}
 
-	
+	@Override
+	public MedicamentoCon clone() {
+		MedicamentoCon clon = new MedicamentoCon(this.nom, this.tipo, this.empresa, this.precio);
+		return clon;
+	}
 	
 
 }

@@ -64,6 +64,12 @@ public class MainController implements Initializable {
             stage.setTitle("Medicaments");
             stage.setScene(new Scene(arrel));
             stage.show();
+        }else if(sItem.equals("Venda")) {
+            Parent arrel = FXMLLoader.load(getClass().getResource("..//view//venda.fxml"));
+
+            stage.setTitle("Venda");
+            stage.setScene(new Scene(arrel));
+            stage.show();
         }
 
 

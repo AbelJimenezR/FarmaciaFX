@@ -16,6 +16,8 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception {
 		Utilitat.cargaMedicamentos();
 		Utilitat.cargaEmpleados();
+		Utilitat.afegirMedicamentsRegistre();
+		Utilitat.afegirUsuarisRegistre();
 		Parent arrel = FXMLLoader.load(getClass().getResource("view/Principal.fxml"));
 
 		stage.setTitle("Farmàcia");

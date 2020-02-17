@@ -2,10 +2,10 @@ package sample;
 
 import java.util.Scanner;
 
-public abstract class Medicamento {
+public abstract class Medicamento implements Comparable<Medicamento>{
 		 protected String nom;
 		 protected Tipo tipo;
-		 protected String Empresa;
+		 protected String empresa;
 		// protected boolean receta;
 		 protected Double precio;
 			//double precioFinal;
@@ -27,14 +27,14 @@ public abstract class Medicamento {
 	public Medicamento(String nom, Tipo tipo, String empresa,  Double precio) {
 		this.nom = nom;
 		this.tipo = tipo;
-		Empresa = empresa;
+		empresa = empresa;
 		this.precio=precio;
 		//this.receta = receta;
 	}
 
 	@Override
 	public String toString() {
-		return "Medicamento [nom=" + nom + ", tipo=" + tipo + ", Empresa=" + Empresa + ", precio=" + precio + "]";
+		return "Medicamento [nom=" + nom + ", tipo=" + tipo + ", Empresa=" + empresa + ", precio=" + precio + "]";
 	}
 
 	public static void nouMedicament() {
@@ -77,11 +77,11 @@ public abstract class Medicamento {
 	}
 
 	public String getEmpresa() {
-		return Empresa;
+		return empresa;
 	}
 
 	public void setEmpresa(String empresa) {
-		Empresa = empresa;
+		empresa = empresa;
 	}
 
 	public Double getPrecio() {
@@ -90,6 +90,15 @@ public abstract class Medicamento {
 
 	public void setPrecio(Double precio) {
 		this.precio = precio;
+	}
+
+	@Override
+	public int compareTo(Medicamento m) {
+		if (this.precio < m.precio)
+			return -1;
+		if (this.precio == m.precio)
+			return 0;
+		return 1;
 	}
 }
 	

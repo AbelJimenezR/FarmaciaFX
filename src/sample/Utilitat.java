@@ -19,10 +19,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Utilitat {
 	
@@ -143,4 +140,28 @@ int s=0;
 		alert.showAndWait();
 
 	}
+
+	public static void afegirMedicamentsRegistre() {
+
+		Registre<Medicamento> rMed = new Registre<Medicamento>();
+
+		for(int i=0; i<medicamentos.size(); i++) {
+			rMed.add(medicamentos.get(i));
+		}
+
+	}
+
+	public static void afegirUsuarisRegistre() {
+
+		Registre<Persona> rPer = new Registre<Persona>();
+
+		Iterator<Persona> i = Persona.emplea.iterator();
+		while(i.hasNext()) {
+			Persona e = i.next();
+			rPer.add(e);
+		}
+
+	}
+
+
 }

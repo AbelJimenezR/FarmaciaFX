@@ -1,6 +1,6 @@
 package sample;
 
-public class MedicamentoSin extends Medicamento implements Pepe{
+public class MedicamentoSin extends Medicamento implements Receta,Cloneable{
 	public MedicamentoSin() {
 		// TODO Auto-generated constructor stub
 	}
@@ -28,6 +28,12 @@ public class MedicamentoSin extends Medicamento implements Pepe{
 		String result = sb.toString();
 		return result;
 		
+	}
+
+	@Override
+	public MedicamentoSin clone(){
+		MedicamentoSin clon = new MedicamentoSin(this.nom, this.tipo, this.empresa, this.precio);
+		return clon;
 	}
 
 
