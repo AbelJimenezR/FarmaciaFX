@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.NouUsuariController">
+<Pane prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.NouUsuariController">
    <children>
+      <Label layoutX="200.0" layoutY="90.0" text="Nom:" />
+      <Label layoutX="200.0" layoutY="130.0" text="Cognom:" />
+      <Label layoutX="200.0" layoutY="170.0" text="Password:" />
+      <Label layoutX="200.0" layoutY="210.0" text="Tipus:" />
 
-      <TextField fx:id="nom" layoutX="148.0" layoutY="71.0" />
-      <TextField fx:id="cognom" layoutX="148.0" layoutY="106.0" />
-      <TextField fx:id="pass" layoutX="148.0" layoutY="143.0" />
-      <TextField fx:id="tipus" layoutX="148.0" layoutY="179.0" />
-      <Button layoutX="193.0" layoutY="240.0" mnemonicParsing="false" onAction="#optBotons" text="Tornar" />
-      <Button layoutX="141.0" layoutY="240.0" mnemonicParsing="false" onAction="#optBotons" text="Ok" />
-      <Label layoutX="61.0" layoutY="76.0" text="Nom:" />
-      <Label layoutX="61.0" layoutY="111.0" text="Cognom:" />
-      <Label layoutX="61.0" layoutY="148.0" text="Password:" />
-      <Label layoutX="61.0" layoutY="184.0" text="Tipus:" />
+      <TextField fx:id="nom" layoutX="318.0" layoutY="90.0" />
+      <TextField fx:id="cognom" layoutX="318.0" layoutY="130.0" />
+      <TextField fx:id="pass" layoutX="318.0" layoutY="170.0" />
+      <TextField fx:id="tipus" layoutX="318.0" layoutY="210.0" />
+      <Button layoutX="344.0" layoutY="305.0" mnemonicParsing="false" onAction="#optBotons" text="Tornar" />
+      <Button layoutX="266.0" layoutY="305.0" mnemonicParsing="false" onAction="#optBotons" text="Ok" />
+      <Label layoutX="242.0" layoutY="31.0" text="NOU USUARI">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
    </children>
 </Pane>

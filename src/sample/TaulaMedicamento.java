@@ -9,7 +9,7 @@ public class TaulaMedicamento {
     private final SimpleStringProperty preu = new SimpleStringProperty("");
     private final SimpleStringProperty recepta = new SimpleStringProperty("");
 
-    public TaulaMedicamento(String n, String t,String e,String p,String r) {
+    public TaulaMedicamento(String n, String t, String e, String p, String r) {
         nom.set(n);
         tipus.set(t);
         empresa.set(e);

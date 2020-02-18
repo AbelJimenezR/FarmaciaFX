@@ -2,5 +2,5 @@ package sample;
 
 public interface Receta {
 
-		public double descuento();
+    public double descuento();
 }

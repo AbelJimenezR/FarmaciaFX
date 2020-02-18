@@ -1,45 +1,38 @@
 package sample;
 
-public class MedicamentoCon extends Medicamento implements Cloneable{
+public class MedicamentoCon extends Medicamento implements Cloneable {
 
-	public MedicamentoCon() {
-		// TODO Auto-generated constructor stub
-	}
+    public MedicamentoCon() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public MedicamentoCon(String nom, Tipo tipo, String empresa, double precio) {
-		super(nom, tipo, empresa, precio);
-		// TODO Auto-generated constructor stub
-	}
-	
-	
-	public void setPreu() {
-		
-	}
-	
-	public double descuento() {
-		
-		return (float) (precio*50/100);
-		
-	}
-	
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		sb.append("Medicamento con receta: \n");
-		sb.append("Artículo: " + nom + "\n");
-		sb.append("Precio: " + precio + "\n");
-		
-		String result = sb.toString();
-		return result;
+    public MedicamentoCon(String nom, Tipo tipo, String empresa, double precio) {
+        super(nom, tipo, empresa, precio);
+        // TODO Auto-generated constructor stub
+    }
 
-		
-	}
+    public void setPreu() {
+    }
 
-	@Override
-	public MedicamentoCon clone() {
-		MedicamentoCon clon = new MedicamentoCon(this.nom, this.tipo, this.empresa, this.precio);
-		return clon;
-	}
-	
+    public double descuento() {
+        return (float) (precio * 50 / 100);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Medicamento con receta: \n");
+        sb.append("Artículo: " + nom + "\n");
+        sb.append("Precio: " + precio + "\n");
+
+        String result = sb.toString();
+        return result;
+    }
+
+    @Override
+    public MedicamentoCon clone() throws CloneNotSupportedException {
+        MedicamentoCon clon = new MedicamentoCon(this.nom, this.tipo, this.empresa, this.precio);
+        return clon;
+    }
 
 }

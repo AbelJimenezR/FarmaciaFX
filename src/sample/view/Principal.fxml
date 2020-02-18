@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
   <children>
@@ -29,7 +31,12 @@
     </MenuBar>
       <AnchorPane prefHeight="394.0" prefWidth="640.0">
          <children>
-            <Label fx:id="label" text="FARMACIA" />
+            <Label fx:id="label" layoutX="107.0" layoutY="29.0" text="FARMACIA CA LA BRUJA">
+               <font>
+                  <Font size="36.0" />
+               </font></Label>
+            <ImageView fx:id="imageView" fitHeight="260.0" fitWidth="260.0" layoutX="190.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
          </children>
       </AnchorPane>
   </children>

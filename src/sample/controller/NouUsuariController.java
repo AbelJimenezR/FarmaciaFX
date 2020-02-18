@@ -17,7 +17,6 @@ import sample.Utilitat;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Iterator;
 import java.util.ResourceBundle;
 
 public class NouUsuariController implements Initializable {
@@ -27,7 +26,6 @@ public class NouUsuariController implements Initializable {
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     @FXML
@@ -35,7 +33,6 @@ public class NouUsuariController implements Initializable {
         Button boto = (Button) event.getSource();
         Stage stage = (Stage) boto.getScene().getWindow(); //this accesses the window.
         String bot = boto.getText();
-        Boolean x=false;
         if (bot.equals("Tornar")) {
 
             Parent arrel = FXMLLoader.load(getClass().getResource("..//view//Principal.fxml"));
@@ -43,41 +40,31 @@ public class NouUsuariController implements Initializable {
             stage.setScene(new Scene(arrel));
             stage.show();
 
-        }else if(bot.equals("Ok")){
+        } else if (bot.equals("Ok")) {
 
+            try {
+                if (Persona.nouUsuari(nom.getText(), cognom.getText(), pass.getText(), tipus.getText())) {
 
-              try {
-                  if(Persona.nouUsuari(nom.getText(), cognom.getText(), pass.getText(), tipus.getText())){
+                    nom.setText("");
+                    cognom.setText("");
+                    pass.setText("");
+                    tipus.setText("");
 
-                      nom.setText("");
-                      cognom.setText("");
-                      pass.setText("");
-                      tipus.setText("");
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Informació");
+                    alert.setHeaderText("Usuari afegit correctament");
+                    alert.showAndWait();
+                } else {
 
-                      Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                      alert.setTitle("Informació");
-                      alert.setHeaderText("Usuari afegit correctament");
+                    Utilitat.alertDades();
+                }
 
-                      alert.showAndWait();
-                  }else{
+            } catch (Exception e) {
 
-                      Utilitat.alertDades();
-
-
-                  }
-
-
-              } catch (Exception e) {
-
-            Utilitat.alertDades();
-              }
-
-
-
+                Utilitat.alertDades();
+            }
         }
-        }
-
-
     }
+}
 
 

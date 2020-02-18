@@ -1,34 +1,34 @@
 package sample;
 
-public class Empleado extends Persona implements  Sou {
+public class Empleado extends Persona implements Sou {
 
-	public double sou;
+    public double sou;
 
-	public Empleado() {
-		super();
-	}
-			
-	public Empleado(String nom, String cognom, String contra) {
-		super(nom, cognom, contra);
-		sou(40);
-	}
+    public Empleado() {
+        super();
+    }
 
-	@Override
-	public String toString() {
-		return super.toString();
-	}
+    public Empleado(String nom, String cognom, String contra) {
+        super(nom, cognom, contra);
+        sou(40);
+    }
 
-	@Override
-	public String getContra() {
-		return contra;
-	}
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
-	@Override
-	public void sou(double hores) {
-		this.sou=hores*6.5;
-	}
+    @Override
+    public String getContra() {
+        return contra;
+    }
 
-	@Override
-	public void souGuardia(double hores) {
-	}
+    @Override
+    public void sou(double hores) {
+        this.sou = hores * 6.5;
+    }
+
+    @Override
+    public void souGuardia(double hores) {
+    }
 }

@@ -11,112 +11,72 @@ import java.util.Scanner;
 
 public class Ticket {
 
-	private static ArrayList<Ticket> llistaTickets;
-	private int numTicket;
-	private Persona persona;
-	private ArrayList<Medicamento> medicamento;
-	private double precioTotal;
-	private double precioTotalReceta;
+    private int numTicket;
+    private Persona persona;
+    public static ArrayList<Medicamento> medicamento;
+    private double precioTotal;
+    private double precioTotalReceta;
 
-	
-	public Ticket() {
-		medicamento= new ArrayList<Medicamento>();
-	}
-	
-	public Ticket(int numTicket, Persona persona) {
-		this();
-		this.numTicket = numTicket;
-		this.persona = persona;
-	
-	}
+    public Ticket() {
+        medicamento = new ArrayList<Medicamento>();
+    }
 
-	public void setMedicamento(Medicamento med) {
-		medicamento.add(med);
-	}
-	
-	public void preuTotalDescompte(ArrayList<Double> preus) {
-		for (Double p : preus) {
-			precioTotalReceta = preus.stream().mapToDouble(f -> f.doubleValue()).sum();		}
-		
-	}
-	
-	public void preuTotal() {
-		for (Medicamento m : medicamento) {
-			precioTotal=precioTotal+m.precio;
-		}
-	}
+    public Ticket(int numTicket, Persona persona) {
+        this();
+        this.numTicket = numTicket;
+        this.persona = persona;
 
-	@Override
-	public String toString() {
-		return "Ticket " +  numTicket + "\n" + "Atendido por: " + persona.nom + "\n"  + medicamento + "\n" + "SubTotal: " + precioTotal + "\n" + "Total con dto recetas: " + precioTotalReceta;
-	}
-	
-	public static void log(Ticket t) {
-		try {
-			FileReader fr = new FileReader("log.txt");
-			BufferedReader br = new BufferedReader(fr);
-			String linea = "";
-			String text="";
+    }
 
-			while ((linea = br.readLine()) != null) {
-				text=text+linea+"\n";
-			}
-			fr.close();
-			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss.SSS");
-			Calendar calendar = Calendar.getInstance();
-			text = text + formatter.format(calendar.getTime()) + " - " + t.toString() + "\n";
-			FileWriter archivo = new FileWriter("log.txt");
-			for(int i=0;i<text.length();i++) {
-				archivo.append(text.charAt(i));
-			}
-			archivo.close();
-		} catch (IOException e) {
-			System.out.println("Archivo no encontrado");
-			e.printStackTrace();
-		}
-	}
-	
-	public static boolean venda(Persona per1,String medi,String recepta) {
-		ArrayList<Double> preus= new ArrayList<Double>();
-		int t=1;
-		Ticket ti1=null;
+    public void setMedicamento(Medicamento med) {
+        medicamento.add(med);
+    }
 
-			ti1 = new Ticket(t, per1);
+    public void preuTotalDescompte(ArrayList<Double> preus) {
+        for (Double p : preus) {
+            precioTotalReceta = preus.stream().mapToDouble(f -> f.doubleValue()).sum();
+        }
 
-					if (Utilitat.compruebaMedicamento(medi) instanceof MedicamentoCon) {
-						MedicamentoCon med = (MedicamentoCon) Utilitat.compruebaMedicamento(medi);
-						if (recepta.equals("S")) {
-							preus.add(med.descuento());
-							ti1.setMedicamento(med);
+    }
 
-							return true;
+    public void preuTotal() {
+        for (Medicamento m : medicamento) {
+            precioTotal = precioTotal + m.precio;
+        }
+    }
 
-						}else{
-							return false;
-						}
-					} else {
-						MedicamentoSin med = (MedicamentoSin) Utilitat.compruebaMedicamento(medi);
-						if (recepta.equals("S")) {
-							preus.add(med.descuento());
-							ti1.setMedicamento(med);
-							return true;
-						} else {
-							preus.add(med.precio);
-							ti1.setMedicamento(med);
+    @Override
+    public String toString() {
+        return "Ticket " + numTicket + "\n" + "Atendido por: " + persona.nom + "\n" + medicamento + "\n" + "SubTotal: " + precioTotal + "\n" + "Total con dto recetas: " + precioTotalReceta;
+    }
 
-							return true;
-						}
+    public static void log(Ticket t) {
+        try {
+            FileReader fr = new FileReader("log.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String linea = "";
+            String text = "";
 
-					}
-			//ti(ti1);
-		//ti1.preuTotalDescompte(preus);
-		//	ti1.preuTotal();
+            while ((linea = br.readLine()) != null) {
+                text = text + linea + "\n";
+            }
+            fr.close();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss.SSS");
+            Calendar calendar = Calendar.getInstance();
+            text = text + formatter.format(calendar.getTime()) + " - " + t.toString() + "\n";
+            FileWriter archivo = new FileWriter("log.txt");
+            for (int i = 0; i < text.length(); i++) {
+                archivo.append(text.charAt(i));
+            }
+            archivo.close();
+        } catch (IOException e) {
+            System.out.println("Archivo no encontrado");
+            e.printStackTrace();
+        }
+    }
 
-		//t++;
-		//Ticket.log(ti1);
-	}
 
-	}
+}
 	
 	
 

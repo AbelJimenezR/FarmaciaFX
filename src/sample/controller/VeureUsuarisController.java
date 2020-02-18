@@ -24,18 +24,16 @@ public class VeureUsuarisController implements Initializable {
     @FXML
     private TableView<TaulaUsuaris> taulaUsuaris;
 
-
-
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         ObservableList<TaulaUsuaris> dades = taulaUsuaris.getItems();
         Iterator<Persona> i = Persona.getEmplea().iterator();
-        while(i.hasNext()) {
+        while (i.hasNext()) {
             Persona e = i.next();
-            if(e instanceof Empleado) {
+            if (e instanceof Empleado) {
                 dades.add(new TaulaUsuaris(e.getNom(), e.getCognom(), e.getContra(), "Empleat Normal"));
-            }else{
+            } else {
                 dades.add(new TaulaUsuaris(e.getNom(), e.getCognom(), e.getContra(), "Empleat de guàrdia"));
             }
         }
@@ -46,7 +44,6 @@ public class VeureUsuarisController implements Initializable {
     protected void tornaPrincipal(ActionEvent event) throws IOException {
         Button boto = (Button) event.getSource();
         Stage stage = (Stage) boto.getScene().getWindow(); //this accesses the window.
-
         Parent arrel = FXMLLoader.load(getClass().getResource("..//view//Principal.fxml"));
         stage.setTitle("Farmacia");
         stage.setScene(new Scene(arrel));

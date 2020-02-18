@@ -15,8 +15,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
-public class nouMedicamentController implements  Initializable{
-
+public class nouMedicamentController implements Initializable {
 
     @FXML
     private TextField nom, empresa, preu;
@@ -24,13 +23,11 @@ public class nouMedicamentController implements  Initializable{
     private ChoiceBox tipus;
     @FXML
     private CheckBox recepta;
-    @FXML
-    private HashMap<Integer,Medicamento> medicamentos=Utilitat.medicamentos;
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        Tipo[] t= Tipo.values();
-        for(Tipo tipo : t) {
+        Tipo[] t = Tipo.values();
+        for (Tipo tipo : t) {
             tipus.getItems().add(tipo);
         }
     }
@@ -40,8 +37,7 @@ public class nouMedicamentController implements  Initializable{
         Button boto = (Button) event.getSource();
         Stage stage = (Stage) boto.getScene().getWindow(); //this accesses the window.
         String bot = boto.getText();
-        String rec="0";
-
+        String rec = "0";
 
         if (bot.equals("Tornar")) {
 
@@ -50,42 +46,35 @@ public class nouMedicamentController implements  Initializable{
             stage.setScene(new Scene(arrel));
             stage.show();
 
-        }else if(bot.equals("Ok")){
-
+        } else if (bot.equals("Ok")) {
 
             try {
-                    if(recepta.isSelected()) {
-                         rec = "1";
-                    }else {
-                         rec = "0";
-                    }
-                        String medi=""+nom.getText()+","+tipus.getValue().toString()+","+empresa.getText()+","+preu.getText()+","+rec;
-                        Utilitat.cargaMedicamentos(medi);
+                if (recepta.isSelected()) {
+                    rec = "1";
+                } else {
+                    rec = "0";
+                }
+                String medi = "" + nom.getText() + "," + tipus.getValue().toString() + "," + empresa.getText() + "," + preu.getText() + "," + rec;
+                Utilitat.cargaMedicamentos(medi);
 
-                    nom.setText("");
-                    empresa.setText("");
-                    preu.setText("");
-                    tipus.setValue(null);
-                    recepta.setSelected(false);
+                nom.setText("");
+                empresa.setText("");
+                preu.setText("");
+                tipus.setValue(null);
+                recepta.setSelected(false);
 
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle("Informació");
-                    alert.setHeaderText("Medicament afegit correctament");
-
-                    alert.showAndWait();
-
-
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Informació");
+                alert.setHeaderText("Medicament afegit correctament");
+                alert.showAndWait();
 
             } catch (Exception e) {
 
                 Utilitat.alertDades();
             }
 
-
-
         }
     }
-
 
 }
 

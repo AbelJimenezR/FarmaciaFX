@@ -8,22 +8,22 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-	public static void main(String[] args) {
-		launch(args);
-	}
+    public static void main(String[] args) {
+        launch(args);
+    }
 
-	@Override
-	public void start(Stage stage) throws Exception {
-		Utilitat.cargaMedicamentos();
-		Utilitat.cargaEmpleados();
-		Utilitat.afegirMedicamentsRegistre();
-		Utilitat.afegirUsuarisRegistre();
-		Parent arrel = FXMLLoader.load(getClass().getResource("view/Principal.fxml"));
+    @Override
+    public void start(Stage stage) throws Exception {
+        Utilitat.cargaMedicamentos();
+        Utilitat.cargaEmpleados();
+        Utilitat.afegirMedicamentsRegistre();
+        Utilitat.afegirUsuarisRegistre();
 
-		stage.setTitle("Farmàcia");
-		stage.setScene(new Scene(arrel, 300, 275));
-		stage.show();
-	}
+        Parent arrel = FXMLLoader.load(getClass().getResource("view/Principal.fxml"));
+        stage.setTitle("Farmàcia");
+        stage.setScene(new Scene(arrel));
+        stage.show();
+    }
 }
 
 	

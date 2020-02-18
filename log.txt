@@ -351,3 +351,211 @@ Precio: 2.5
 ]
 SubTotal: 4.4
 Total con dto recetas: 4.4
+17/02/2020 09:30:52.224 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+, Medicamento sin receta: 
+Artículo: Paracetamol
+Precio: 2.5
+, Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 32.2
+Total con dto recetas: 18.299999618530272
+17/02/2020 09:31:31.763 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Morfina
+Precio: 3.95
+, Medicamento sin receta: 
+Artículo: Fluconazol
+Precio: 4.28
+, Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 36.03
+Total con dto recetas: 38.454999260902405
+18/02/2020 02:16:31.163 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+, Medicamento sin receta: 
+Artículo: Paracetamol
+Precio: 2.5
+, Medicamento con receta: 
+Artículo: Insulina
+Precio: 45.0
+]
+SubTotal: 49.4
+Total con dto recetas: 25.65
+18/02/2020 02:19:25.640 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+, Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 3.8
+Total con dto recetas: 2.849999988079071
+18/02/2020 02:20:04.132 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Paracetamol
+Precio: 2.5
+]
+SubTotal: 2.5
+Total con dto recetas: 5.349999988079071
+18/02/2020 02:20:45.837 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 27.8
+Total con dto recetas: 19.249999606609343
+18/02/2020 02:21:27.531 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 27.8
+Total con dto recetas: 13.899999618530273
+18/02/2020 02:21:46.275 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 15.799999618530274
+18/02/2020 02:23:14.793 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 27.8
+Total con dto recetas: 13.899999618530273
+18/02/2020 02:23:23.754 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 15.799999618530274
+18/02/2020 02:29:06.232 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:29:32.290 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 27.8
+Total con dto recetas: 15.799999618530274
+18/02/2020 02:31:35.143 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:32:08.764 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Paroxetina
+Precio: 3.04
+]
+SubTotal: 3.04
+Total con dto recetas: 1.5199999809265137
+18/02/2020 02:32:54.633 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:33:06.985 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 3.8
+18/02/2020 02:33:26.695 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 5.699999999999999
+18/02/2020 02:34:25.011 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:35:26.516 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:35:34.200 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 27.8
+Total con dto recetas: 13.899999618530273
+18/02/2020 02:36:02.934 - Ticket 1
+Atendido por: Abel
+[Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+, Medicamento con receta: 
+Artículo: Desonida
+Precio: 27.8
+]
+SubTotal: 55.6
+Total con dto recetas: 27.799999237060547
+18/02/2020 02:37:08.966 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
+18/02/2020 02:44:49.164 - Ticket 1
+Atendido por: Abel
+[Medicamento sin receta: 
+Artículo: Aspirina
+Precio: 1.9
+]
+SubTotal: 1.9
+Total con dto recetas: 1.9
